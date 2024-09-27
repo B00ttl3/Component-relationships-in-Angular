@@ -1,4 +1,18 @@
 <!-- Parent Child Relationship. So first we have added the app-header as the parent component. we have already made it insdie the header folder and made its selector app-header inside the ts file of that folder, and then now we added that here and same goes with app-navbar. Both of these are the CHILD components, as these are the inner components, and the parent component is this html file which is app.component -->
 
-<app-header></app-header>
-<app-navbar></app-navbar>
+<!-- <app-header></app-header>
+<app-navbar></app-navbar> -->
+
+
+<!-- Data-flow between parent to child component -->
+
+<!-- in the example below we are going to connect the data from parent (app) component to child (post) component. as the appPostTitle is the variable inside the app component's ts file but we want to use it inside the html file of post component -->
+
+<!-- So, at first what we did is we made a new variable inside the [] and made it equal to the variable which we have made inside the app component's TS file. but that will give us error. to overcome that error what we did is, we made that variable inside the TS file of post list component and then we imported it by adding @Import before that variable. and then we added that variable inside the html file of the post list component by using string interpolation inside the h2, and thats how we attached the variable from parent component to child component -->
+
+<h1>{{ appPostTitle }} (app)</h1>
+
+
+<app-posts-list [postListTitle]="appPostTitle"></app-posts-list>
+<app-posts-list [postSecondTry]="secondTry" ></app-posts-list>
+

@@ -4,13 +4,15 @@ import { AppNavbar } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet } from '@angular/common';
+import { PostsListComponent } from './posts-list/posts-list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet, 
     AppNavbar, 
-    HeaderComponent, 
+    HeaderComponent,
+    PostsListComponent,
     FormsModule, 
     NgIf, 
     NgTemplateOutlet, 
@@ -24,6 +26,6 @@ import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title: string = 'This loaded dynamically'
-
+  appPostTitle: string = 'Post 1';
+  secondTry: string = 'Post2';
 }
