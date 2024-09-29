@@ -10,14 +10,15 @@
 
 <!-- So, at first what we did is we made a new variable inside the [] and made it equal to the variable which we have made inside the app component's TS file. but that will give us error. to overcome that error what we did is, we made that variable inside the TS file of post list component and then we imported it by adding @Import before that variable. and then we added that variable inside the html file of the post list component by using string interpolation inside the h2, and thats how we attached the variable from parent component to child component -->
 
-<h1>{{ appPostTitle }} (app)</h1>
+<!-- <h1>{{ appPostTitle }} (app)</h1>
 
 
 <app-posts-list [postListTitle]="appPostTitle" [postIsLogin] = "appIsLogin"
-></app-posts-list>
+></app-posts-list> -->
 
 
-<!-- Multiple Data flow -->
+<!-- Child to Parent data flow using the ViewChild decorator. We first Imported @ViewChild inside the TS file of Parent component and then imported the PostsListComponent from the ts file of child component inside the () and then we added the variable which we made inside the child component's ts file infront of it and gave it the type: any. and then we imported the AfterViewInit inside the Parent ts file at the top and then used ngAfterViewInit to make the child component's varibale to show up fast. then we made a variable after this. which is message and made it equal to this.childMessage.childMessage. two times cause first is from the main TS file 2nd is from the child component's ts file and then used the string interpolation inside the main html file and used the new variable message there -->
 
+<app-posts-list></app-posts-list>
 
-
+<p>{{ message }}</p>

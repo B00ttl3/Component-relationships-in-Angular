@@ -8,6 +8,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './posts-list.component.css'
 })
 export class PostsListComponent {
- @Input() postListTitle: string = '';
- @Input() postIsLogin: boolean = false;
+  // The 2 below this are the examples of data binding from parent component to child component
+//  @Input() postListTitle: string = '';
+//  @Input() postIsLogin: boolean = false;
+
+  childMessage: string = 'Hello from Child Component';
+  postCount: number = 0;
 }
