@@ -27,5 +27,6 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 })
 export class AppComponent {
   appPostTitle: string = 'Post 1';
-  secondTry: string = 'Post2';
+  appIsLogin: boolean = false;
+
 }

@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PostsListComponent {
  @Input() postListTitle: string = '';
- @Input () postSecondTry: string = '';
+ @Input() postIsLogin: boolean = false;
 }

@@ -13,6 +13,11 @@
 <h1>{{ appPostTitle }} (app)</h1>
 
 
-<app-posts-list [postListTitle]="appPostTitle"></app-posts-list>
-<app-posts-list [postSecondTry]="secondTry" ></app-posts-list>
+<app-posts-list [postListTitle]="appPostTitle" [postIsLogin] = "appIsLogin"
+></app-posts-list>
+
+
+<!-- Multiple Data flow -->
+
+
 
