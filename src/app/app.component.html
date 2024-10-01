@@ -34,7 +34,13 @@
 
 <!-- ng-content: means adding the whole child html file and placing it as we want to place it -->
 
+<app-posts-list></app-posts-list>
+
+
+<!-- MultiSlot content projection in angular. means we wanted to add these different type of information to different parts of the HTML file from the child component. so what we did is, we made one div and inside that div we made one header in which we wanted to show username. then we made body in which we wanted to show the name, and lastly we made the footer in which we wanted to show the button. So, inside that header, body and footer we have used the ng-content tag and we made it specific by using the select and assigning the specific name to inside the [] like <ng-content select = "[body]" ></ng-content> in this way we can put the specific data or dile inside the specific part of the parent component. using the child component's html file -->
 <app-card>
-    <p>This is loaded using ng-content</p>
+    <span header > username </span>
+    <h1 body > Umair Munir </h1>
+    <button footer >View Profile</button>
 </app-card>
 
