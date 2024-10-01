@@ -27,7 +27,14 @@
 
 <!-- Child-Parent @output-Event Emitter-1: For this we have to use the @Output and EventEmitter properties inside the ts file of Posts-list. and then we have to make few events in ts file to use them inside the html file -->
 
-<app-posts-list (MessageEvent)="reciveMessage($event)"  ></app-posts-list>
+<!-- <app-posts-list (MessageEvent)="reciveMessage($event)"  ></app-posts-list>
 
-<p>{{ messageFromChild }}</p>
+<p>{{ messageFromChild }}</p> -->
+
+
+<!-- ng-content: means adding the whole child html file and placing it as we want to place it -->
+
+<app-card>
+    <p>This is loaded using ng-content</p>
+</app-card>
 

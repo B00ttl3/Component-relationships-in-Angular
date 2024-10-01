@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet } from '@angular/common';
 import { PostsListComponent } from './posts-list/posts-list.component';
+import { CardComponent } from './card/card.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,6 +14,7 @@ import { PostsListComponent } from './posts-list/posts-list.component';
     AppNavbar, 
     HeaderComponent,
     PostsListComponent,
+    CardComponent,
     FormsModule, 
     NgIf, 
     NgTemplateOutlet, 
