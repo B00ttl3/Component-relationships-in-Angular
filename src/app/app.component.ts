@@ -41,7 +41,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.childMessage);
     this.message = this.childMessage.childMessage;
     
   }

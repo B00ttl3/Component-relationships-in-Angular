@@ -19,12 +19,15 @@
 
 <!-- Child to Parent data flow using the ViewChild decorator. We first Imported @ViewChild inside the TS file of Parent component and then imported the PostsListComponent from the ts file of child component inside the () and then we added the variable which we made inside the child component's ts file infront of it and gave it the type: any. and then we imported the AfterViewInit inside the Parent ts file at the top and then used ngAfterViewInit to make the child component's varibale to show up fast. then we made a variable after this. which is message and made it equal to this.childMessage.childMessage. two times cause first is from the main TS file 2nd is from the child component's ts file and then used the string interpolation inside the main html file and used the new variable message there -->
 
-<app-posts-list (MessageEvent)="reciveMessage($event)" ></app-posts-list>
+<!-- <app-posts-list></app-posts-list> -->
+
+<!-- <p>{{ message }}</p> -->
+
+<!-- There are two approached to get the data from child component to parent component. One is ViewChild which we used in upper example. the 2nd one is @Output() EventEmitted(). the first one is okay if we have less amount of variables in the child component. but if we have 100s of components inside the child component, then it is better to use the 2nd approach, as in that case we will use the @Output EventEmitter() on one specific variable, and then give it the name according to our desire, In this case we can name as many variables as we want and can use as many variables inside the parent component as we want. The bridge is @Output and EventEmitter() brings the specific data which we want -->
+
+<!-- Child-Parent @output-Event Emitter-1: For this we have to use the @Output and EventEmitter properties inside the ts file of Posts-list. and then we have to make few events in ts file to use them inside the html file -->
+
+<app-posts-list (MessageEvent)="reciveMessage($event)"  ></app-posts-list>
 
 <p>{{ messageFromChild }}</p>
-
-<p>{{ message }}</p>
-
-
-<!-- Child-Parent @output-Event Emitter-1 -->
 
