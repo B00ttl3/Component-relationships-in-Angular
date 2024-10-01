@@ -6,3 +6,11 @@
 <h3>{{postIsLogin}} - (post try) </h3> -->
 
 <button (click)="sendMessage()" >Send Message to Parent</button>
+
+<!-- As we have added the card component here. so by this way the posts-listcomponent is the parent component of card component as the data is coming from there -->
+
+<app-card>
+    <h2>Blog post title 1</h2>
+    <p>05/08/2023</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium qui quibusdam asperiores amet, sint et.</p>
+</app-card>
