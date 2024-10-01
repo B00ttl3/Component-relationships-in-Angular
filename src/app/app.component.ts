@@ -34,6 +34,8 @@ export class AppComponent implements AfterViewInit {
   @ViewChild (PostsListComponent) childMessage: any;
   message: string = '';
 
+  messageFromChild: string = '';
+
   constructor () {
     console.log(this.childMessage);
   }
@@ -42,6 +44,10 @@ export class AppComponent implements AfterViewInit {
     console.log(this.childMessage);
     this.message = this.childMessage.childMessage;
     
+  }
+
+  reciveMessage(message: string) {
+    this.messageFromChild = message;
   }
 
 }
